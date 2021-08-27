@@ -4,7 +4,7 @@
 
     <groupId>com.spring</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>Pet Clinic</name>
     <description>Pet Clinic Project</description>
@@ -56,7 +56,7 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:git@github.com:lslaoang/Pet-Clinic.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/lslaoang/Pet-Clinic.git</developerConnection>
       <tag>pet-clinic-0.0.1</tag>
   </scm>
 
