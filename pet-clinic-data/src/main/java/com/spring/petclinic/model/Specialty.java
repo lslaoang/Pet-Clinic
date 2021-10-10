@@ -4,6 +4,7 @@ public class Specialty extends BaseEntity{
 
     private String description;
 
+    /*Getter and setter provided*/
     public String getDescription() {
         return description;
     }
