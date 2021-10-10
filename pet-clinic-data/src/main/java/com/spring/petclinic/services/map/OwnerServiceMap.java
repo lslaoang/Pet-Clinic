@@ -42,16 +42,22 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public Owner save(Owner object) {
+
         if(object != null){
+            //If object to be saved has no ID, add it to petTypeService(which is a CRUD) and set its ID base on it.
             if(object.getPets() != null){
+                //Check each pet for PetType ID
                 object.getPets().forEach(pet->{
                     if(pet.getPetType()!=null){
+                        //If ID is null save it first to petTypeService
                         if(pet.getPetType().getId() == null){
+                            //Persisted to CRUD service
                             pet.setPetType(petTypeService.save(pet.getPetType()));
                         }
                     } else{
                         throw new RuntimeException("Pet Type is required");
                     }
+                    //Finally, set the ID of the pet if null
                     if(pet.getId() == null){
                         Pet savedPet = petService.save(pet);
                         pet.setId(savedPet.getId());

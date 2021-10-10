@@ -1,5 +1,6 @@
 package com.spring.petclinic.model;
 
+//Generic object for a person
 public class Person extends BaseEntity{
     private String firstName;
     private String lastName;
