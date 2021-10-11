@@ -7,6 +7,10 @@ import java.util.*;
 public abstract class AbstractMapService<T extends BaseEntity,ID extends Long> {
     protected Map<Long,T> map = new HashMap();
 
+    /*
+    Setting generics for services.
+    */
+
     Set<T> findAll(){
         return new HashSet<>(map.values());
     }
@@ -16,6 +20,7 @@ public abstract class AbstractMapService<T extends BaseEntity,ID extends Long> {
     }
 
     T save(T object){
+        //Object validation before saving
         if(object !=null){
             if(object.getId()==null){
                 object.setId(getNextId());
