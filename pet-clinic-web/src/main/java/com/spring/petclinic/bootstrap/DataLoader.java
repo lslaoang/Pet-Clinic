@@ -28,11 +28,14 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         int count = petTypeService.findAll().size();
+
+        //Validation for DB
         if(count == 0) {
             localData();
         }
     }
 
+    //Initial Data to Persist
     private void localData() {
         PetType dog = new PetType();
         dog.setName("Dog");

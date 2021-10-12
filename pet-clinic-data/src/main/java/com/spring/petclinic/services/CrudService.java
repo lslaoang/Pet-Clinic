@@ -2,6 +2,7 @@ package com.spring.petclinic.services;
 
 import java.util.Set;
 
+//Copy of CRUDs service interface
 public interface CrudService<T,ID> {
     Set<T> findAll();
     T findById(ID id);
