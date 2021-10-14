@@ -10,8 +10,10 @@ public class Owner extends Person{
 
     @Column(name="address")
     private String address;
+
     @Column(name="city")
     private String city;
+
     @Column(name="telephone")
     private String telephone;
 
@@ -42,11 +44,7 @@ public class Owner extends Person{
         this.telephone = telephone;
     }
 
-    public Set<Pet> getPets() {
-        return pets;
-    }
+    public Set<Pet> getPets() {       return pets;    }
 
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
-    }
+    public void setPets(Set<Pet> pets) {     this.pets = pets;   }
 }
