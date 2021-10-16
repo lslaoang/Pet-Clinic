@@ -3,21 +3,19 @@ package com.spring.petclinic.services.springdatajpa;
 import com.spring.petclinic.model.Specialty;
 import com.spring.petclinic.repositories.SpecialtyRepository;
 import com.spring.petclinic.services.SpecialtyService;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@AllArgsConstructor
 @Service
 @Profile("springdatajpa")
 public class SpecialtySDJpaService implements SpecialtyService {
 
     private final SpecialtyRepository specialtyRepository;
-
-    public SpecialtySDJpaService(SpecialtyRepository specialtyRepository) {
-        this.specialtyRepository = specialtyRepository;
-    }
 
     @Override
     public Set<Specialty> findAll() {

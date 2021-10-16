@@ -4,20 +4,18 @@ import com.spring.petclinic.model.Specialty;
 import com.spring.petclinic.model.Vet;
 import com.spring.petclinic.services.SpecialtyService;
 import com.spring.petclinic.services.VetService;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@AllArgsConstructor
 @Service
 @Profile({"default","map"})
 public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     private final SpecialtyService specialtyService;
-
-    public VetMapService(SpecialtyService specialtyService) {
-        this.specialtyService = specialtyService;
-    }
 
     @Override
     public Set<Vet> findAll() {

@@ -5,11 +5,13 @@ import com.spring.petclinic.model.Pet;
 import com.spring.petclinic.services.OwnerService;
 import com.spring.petclinic.services.PetService;
 import com.spring.petclinic.services.PetTypeService;
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@AllArgsConstructor
 @Service
 @Profile({"default","map"})
 public class OwnerMapService extends AbstractMapService<Owner,Long> implements OwnerService {
@@ -17,11 +19,6 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
 
     private final PetTypeService petTypeService;
     private final PetService petService;
-
-    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
-        this.petTypeService = petTypeService;
-        this.petService = petService;
-    }
 
     @Override
     public Set<Owner> findAll() {
