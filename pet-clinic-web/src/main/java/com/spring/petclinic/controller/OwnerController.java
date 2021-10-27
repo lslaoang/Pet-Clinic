@@ -30,8 +30,6 @@ public class OwnerController {
 
     @RequestMapping({"/find/{ownerId}"})
     public String findOwner(@PathVariable("ownerId") Long id, Model model){
-        if(id==null)  id=1L;
-
             model.addAttribute("owners",ownerService.findById(id));
 
         return "owners/index";
