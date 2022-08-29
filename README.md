@@ -1,3 +1,3 @@
-# Pet-Clinic
+# Pet Clinic
 
 Simple web services that utilize Spring Framework
