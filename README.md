@@ -1,3 +1,3 @@
 # Pet Clinic
 
-Simple web services that utilize Spring Framework
+Simple web services that utilize Spring Framework and SpringBoot.
